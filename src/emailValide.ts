@@ -11,8 +11,17 @@ export function isValidEmail(email:String): boolean {
     if(partialEmail.length !== 2){
         return false;
     }
-    if (partialEmail[0]?.length === 0 || partialEmail[1]?.length === 0){
+
+    const leftEmail = partialEmail[0];
+    const rightEmail = partialEmail[1];
+
+    if (leftEmail?.length === 0 || rightEmail?.length === 0){
         return false;
     }
+
+    if(!rightEmail?.includes('.')) return false;
+    if(rightEmail.lastIndexOf('.') === rightEmail.length - 1) return false;
+
+
     return true;
 }
