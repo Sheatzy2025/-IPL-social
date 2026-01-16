@@ -19,4 +19,9 @@ describe('Email Validation', () => {
         expect(isValidEmail("toto@")).toBe(false);
     })
 
+    test('should return false if domain has no dot or if the dot is at the end of the potential email', () => {
+        expect(isValidEmail("toto@vincibe")).toBe(false);
+        expect(isValidEmail("toto@vinci.be.")).toBe(false);
+    })
+
 });
