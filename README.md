@@ -12,7 +12,7 @@
 
 Le projet contient une fonction de validation d'email (`src/emailValide.ts`) développée en **TypeScript** et suivant la méthodologie **TDD** (Test Driven Development)
 
-Conformément aux contraintes de l'examen, aucune expression régulière (Regex) n'a été utilisée[cite: 41]. La validation suit cette logique algorithmique :
+Conformément aux contraintes de l'examen, aucune expression régulière (Regex) n'a été utilisée. La validation suit cette logique algorithmique :
 1.  **Absence d'espaces :** La chaîne est rejetée si elle contient des espaces.
 2.  **Présence de l'arobase :** L'email doit contenir un caractère `@`.
 3.  **Structure globale :** La chaîne est séparée en deux parties via le séparateur `@`. Il doit y avoir du texte avant et après ce séparateur.
