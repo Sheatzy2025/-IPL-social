@@ -13,5 +13,10 @@ describe('Email Validation', () => {
         expect(isValidEmail("toto @vinci.be")).toBe(false);
         expect(isValidEmail("toto@ vinci.be")).toBe(false);
     });
-    
+
+    test('should return false if there is not test after and bfore the @', () => {
+        expect(isValidEmail("@vinci.be")).toBe(false);
+        expect(isValidEmail("toto@")).toBe(false);
+    })
+
 });
