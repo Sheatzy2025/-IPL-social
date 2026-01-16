@@ -1,4 +1,4 @@
-export function isValidEmail(email:String): boolean {
+export function isValidEmail(email:string): boolean {
     if(!email.includes('@')){
         return false;
     }
